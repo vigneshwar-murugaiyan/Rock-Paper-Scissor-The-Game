@@ -1,0 +1,117 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Professional font choice */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Roboto Slab', serif; /* Use Roboto Slab for titles */
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    color: #4e54c8; /* Creative color */
+}
+
+.game {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 20px;
+    padding: 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+button i {
+    font-size: 120px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+button:hover i {
+    color: #4e54c8; /* Creative color */
+}
+
+#bot, #user, #result {
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    background-color: rgba(78, 84, 200, 0.8); /* Creative color with transparency */
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
+#result {
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: resultAnimation 1s ease;
+}
+
+@keyframes resultAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#result.win {
+    color: #00FF00; /* Green for win */
+}
+
+#result.lose {
+    color: #FF0000; /* Red for lose */
+}
+
+#result.draw {
+    color: #FFFF00; /* Yellow for draw */
+}
